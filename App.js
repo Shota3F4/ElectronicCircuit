@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import Resistance from './assets/src/components/Resistanse'
+import Resistance from './src/components/Resistanse'
 
 
 export default class App extends React.Component {
@@ -9,6 +9,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <View style = {styles.appbar}>
+        <Text style = {styles.text}>Hello World</Text>
           <Resistance />
         </View>
       </View > 
@@ -18,9 +19,10 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 2,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flex: 1,
   },
+  text:{
+    top:400,
+    alignSelf:'center'
+  }
 });
