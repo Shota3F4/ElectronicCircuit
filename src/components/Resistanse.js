@@ -19,10 +19,18 @@ class Resistance extends React.Component{
      else return "Infinity." 
    }
 
+
+measureView(event){
+  this.setState({Width:event.nativeEvent.layout.width})
+  this.setState({Height:event.nativeEvent.layout.height})
+}
   render(){
     return (
-      <View style = {styles.container}>
-          <Image source={require('../../assets/ResistanceFigure.png')} style = {styles.imagestyle}/>
+      <View style = {[styles.container,{width:this.state.Width,height:this.state.Height}]}>
+          <Image source={require('../../assets/ResistanceFigure.png')} 
+            onLayout={(event) => this.measureView(event)} 
+            style = {styles.imagestyle}
+            />
           <View style = {styles.resistanceInput}>
             <TextInput 
               style = {styles.input}  
@@ -37,11 +45,13 @@ class Resistance extends React.Component{
   }
 }
 const styles = StyleSheet.create({
-  container:{ 
-    alignItems:'center',
-      
+  container:{
+    top:0,
+    left:130,
+    alignItems:'center'
   },
   imagestyle:{
+    
   },
   resistanceInput:{
     margin:5,
