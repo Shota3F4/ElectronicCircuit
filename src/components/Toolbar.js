@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet,View,Text,TouchableHighlight} from 'react-native';
 import {Font} from 'expo'
 import Fontawesome from '../../assets/fa-solid-900.ttf'
-
+import Button from '../elements/button'
 
 class Toolbar extends React.Component{
   state={
@@ -23,13 +23,13 @@ class Toolbar extends React.Component{
         <View style = {styles.container}>
         {
           this.state.fontLoaded ? (
-            <TouchableHighlight 
-            style = {styles.buttonstyle}
-            underlayColor='transparent'
-            onPress={() => { this.PopDrawer()}}
-            >
-              <Text style = {styles.buttontextstyle}>{'\uf552'}</Text>
-            </TouchableHighlight> 
+            <Button 
+            style = { styles.buttonstyle} 
+            color = '#162226' 
+            url = {'\uf552'}
+            size = {60}
+            onPress = {() => {this.PopDrawer()}}
+            />
           ):null
           
         }
@@ -43,24 +43,14 @@ const styles = StyleSheet.create({
     right:20,
     width:90,
     height:70,
-    top:100,
+    top:80,
     backgroundColor:'#7cffff',
     borderRadius:15
     
   },
   buttonstyle:{
-    top:10,
-    left:30,
-    width:50,
-    height:50,
-    
-  },
-  buttontextstyle:{
-    justifyContent:'center',
-    alignSelf:'center',
-    fontFamily:'fontawesome',
-    fontSize:56,
-    color:'#162226'
+    top:5,
+    left:25,
   }
 });
 
