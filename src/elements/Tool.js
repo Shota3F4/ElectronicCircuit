@@ -7,7 +7,7 @@ class Tool extends Component{
 
   }
   render(){
-    const {url,color,style,onPress,size} = this.props;
+    const {image} = this.props;
     
 
     return (
@@ -15,11 +15,10 @@ class Tool extends Component{
        
          <TouchableHighlight 
          style = {styles.buttonstyle}
-         underlayColor='#ddd'
+         underlayColor='transparent'
          onPress ={this.onPress}
          >
-           <Image  source={require('../../assets/ResistanceFigure.png')} 
-            
+           <Image  source={image}
             style = {styles.imagestyle}
             />
         </TouchableHighlight>
@@ -27,13 +26,14 @@ class Tool extends Component{
     )
   }
 }
-//{require('../../assets/ResistanceFigure.png')}
+//
 
 const styles=StyleSheet.create({
   container:{
    width:200,
    height:120,
    borderWidth:1,
+   backgroundColor:'#fff'
   },
   buttonstyle:{
     width:200,
