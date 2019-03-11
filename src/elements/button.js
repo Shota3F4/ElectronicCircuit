@@ -45,7 +45,7 @@ class Button extends Component{
 const styles=StyleSheet.create({
   container:{
     top:0,
-    left:0
+    left:0,
   },
   buttonstyle:{
     width:60,
@@ -56,7 +56,8 @@ const styles=StyleSheet.create({
     alignSelf:'center',
     fontFamily:'fontawesome',
     fontSize:60,
-    color:'#000'
+    color:'#000',
+    
   }
 
 })
