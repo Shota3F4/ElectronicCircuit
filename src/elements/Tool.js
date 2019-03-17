@@ -7,7 +7,7 @@ class Tool extends Component{
 
   }
   render(){
-    const {image} = this.props;
+    const {image,onPress} = this.props;
     
 
     return (
@@ -16,7 +16,7 @@ class Tool extends Component{
          <TouchableHighlight 
          style = {styles.buttonstyle}
          underlayColor='transparent'
-         onPress ={this.onPress}
+         onPress ={onPress}
          >
            <Image  source={image}
             style = {styles.imagestyle}
