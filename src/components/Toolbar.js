@@ -28,7 +28,7 @@ class Toolbar extends React.Component{
             color = '#162226' 
             url = {'\uf552'}
             size = {60}
-            onPress = {() => {this.PopDrawer()}}
+            onPress = {() => {this.props.onPress()}}
             />
           ):null
           
