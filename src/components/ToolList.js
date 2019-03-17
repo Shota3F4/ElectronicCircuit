@@ -12,17 +12,18 @@ class ToolList extends Component {
   componentWillMount(){
     this.setState(
       {ImagePathdata:[
-            { key: require('../../assets/demoImage/JerryandNibles.jpg') },
-            { key: require('../../assets/demoImage/Tomface03.jpg') },
-            { key: require('../../assets/demoImage/Jerry.jpg') },
-            { key: require('../../assets/demoImage/Nibles.png') },
-            { key: require('../../assets/demoImage/Jerryface.jpg') },
-            { key: require('../../assets/demoImage/Tomface.jpg') },
-            { key: require('../../assets/demoImage/Tomface02.png') },
+            { key: require('../../assets/JerryandNibles.jpg') },
+            { key: require('../../assets/Tomface03.jpg') },
+            { key: require('../../assets/Jerry.jpg') },
+            { key: require('../../assets/Nibles.png') },
+            { key: require('../../assets/Jerryface.jpg') },
+            { key: require('../../assets/Tomface.jpg') },
+            { key: require('../../assets/Tomface02.png') },
           ]
     })
   }
   render() {
+    const {onPress} = this.props
     return (
       <View style={styles.container}>
         <FlatList
@@ -30,7 +31,7 @@ class ToolList extends Component {
           data={this.state.ImagePathdata}
           renderItem={({ item }) => (
             <View style={styles.item}>
-              <Tool image={item.key} />
+              <Tool image={item.key} onPress = {onPress}/>
             </View>
           )}
         />
