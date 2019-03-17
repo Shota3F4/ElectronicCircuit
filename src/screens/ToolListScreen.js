@@ -19,12 +19,12 @@ class ToolListScreen extends Component{
               size = {105} 
               color = '#fff'
               style = {{top:0}}
-             onPress = {() => {this.onPress()}}
+              onPress = {() => {this.props.onPress()}}
               />
           </View>
         </View>
         <View style = {styles.liststyle}>
-          <ToolList />
+          <ToolList onPress = {() => {this.props.onPress()}}/>
         </View>
       </View>
     )
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     borderRadius:14,
     alignItems:'center',
    justifyContent: 'center',
-    width:220,
+    width:150,
     height:100
   },
   liststyle:{
