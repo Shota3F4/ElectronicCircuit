@@ -8,22 +8,23 @@ class SumResistance extends Component{
     const {SumRes} = this.props
     return(
       <View style = {styles.container}>
-     <Text style = {styles.text}>{SumRes}</Text>
+     <Text style = {styles.text}>全抵抗:{SumRes}Ω</Text>
       </View>
     )
   }
 }
 const styles = StyleSheet.create({
   container:{
-    width:150,
+    width:140,
     height:150,
-    top:300,
-    left:130,
-    backgroundColor:'#8dd'
+    top:160,
+    left:200,
+    backgroundColor:'#ff8',
+    borderRadius:24
   },
   text:{
-    fontSize:30,
-    alignSelf:'center'
+    fontSize:23,
+    padding:10
 
   }
 })
