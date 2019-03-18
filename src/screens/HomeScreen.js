@@ -3,9 +3,16 @@ import { StyleSheet, View, Text } from 'react-native';
 import Toolbar from '../components/Toolbar';
 import Drawer from 'react-native-drawer';
 import SumResistance from '../components/SumResistance'
+import Circuit from '../components/Circiuit'
 import ToolListScreen from './ToolListScreen';
 
 class HomeScreen extends Component {
+  state:{
+    Volt:5,
+    Ampare:1,
+    Resistance:10,
+  }
+
   openDrawer = () => {
     this._drawer.open();
     console.log('open')
@@ -15,16 +22,22 @@ class HomeScreen extends Component {
     console.log('close')
   };
   render() {
+    
     return (
+      
       <Drawer ref={ref => (this._drawer = ref)} 
-          content={ <ToolListScreen onPress  = {this.closeDrawer}/> }
+          content={ <ToolListScreen onPress  = {this.closeDrawer} 
+          /> }
           type = 'overlay'
           tweenDuration = {100}
           openDrawerOffset = {140}
           >
         <View style={styles.container}>
           <Toolbar onPress={this.openDrawer} />
-          <SumResistance SumRes = {120}/>
+          <Circuit />
+          <SumResistance SumRes = {100} />
+          
+
         </View>
       </Drawer>
     );
