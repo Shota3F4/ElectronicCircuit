@@ -6,9 +6,6 @@ import Button from '../elements/button'
 
 
 class ToolListScreen extends Component{
-  onPress(){
-    console.log('Hi')
-  }
   render(){
     return (
       <View style = {styles.container}>
@@ -24,7 +21,8 @@ class ToolListScreen extends Component{
           </View>
         </View>
         <View style = {styles.liststyle}>
-          <ToolList onPress = {() => {this.props.onPress()}}/>
+          <ToolList onPress = {() => {this.props.onPress()}} 
+          />
         </View>
       </View>
     )
