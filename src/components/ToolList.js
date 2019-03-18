@@ -12,13 +12,34 @@ class ToolList extends Component {
   componentWillMount(){
     this.setState(
       {ImagePathdata:[
-            { key: require('../../assets/JerryandNibles.jpg') },
-            { key: require('../../assets/Tomface03.jpg') },
-            { key: require('../../assets/Jerry.jpg') },
-            { key: require('../../assets/Nibles.png') },
-            { key: require('../../assets/Jerryface.jpg') },
-            { key: require('../../assets/Tomface.jpg') },
-            { key: require('../../assets/Tomface02.png') },
+            { 
+              key: require('../../assets/JerryandNibles.jpg') ,
+              id:'JerNib'
+            },
+            { 
+              key: require('../../assets/Tomface03.jpg'),
+              id:'Tomface3' 
+            },
+            { 
+              key: require('../../assets/Jerry.jpg') ,
+              id:'Jer'
+            },
+            { 
+              key: require('../../assets/Nibles.png') ,
+              id:'Nib'
+            },
+            { 
+              key: require('../../assets/Jerryface.jpg') ,
+              id:'Jerface'
+            },
+            {
+               key: require('../../assets/Tomface.jpg') ,
+              id:'Tomface'
+            },
+            { 
+              key: require('../../assets/Tomface02.png') ,
+              id:'Tomface02'
+            },
           ]
     })
   }
@@ -31,7 +52,8 @@ class ToolList extends Component {
           data={this.state.ImagePathdata}
           renderItem={({ item }) => (
             <View style={styles.item}>
-              <Tool image={item.key} onPress = {onPress}/>
+              <Tool image={item.key} 
+              onPress = {onPress}/>
             </View>
           )}
         />
